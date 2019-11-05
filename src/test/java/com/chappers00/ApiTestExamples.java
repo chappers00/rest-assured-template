@@ -1,10 +1,11 @@
-import org.junit.Test;
+package com.chappers00;
 
+import org.junit.Test;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 
-public class memberTest {
+public class ApiTestExamples {
 
     @Test() public void
     //Also see https://any-api.com/xkcd_com/xkcd_com/docs/_info_0_json/GET
