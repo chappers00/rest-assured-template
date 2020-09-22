@@ -8,17 +8,16 @@ import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInC
 public class TestAPIExamples {
 
     @Test
-    public void
     //Also see https://any-api.com/xkcd_com/xkcd_com/docs/_info_0_json/GET
-    xkcdinfo0() {
+    public void testXkcdinfo0() {
         when().get("http://xkcd.com/info.0.json").
                 then().
                 statusCode(200).
                 body("$", hasKey("title"));
     }
 
-    @Test public void
-    xkcdGetComic() {
+    @Test 
+    public void testXkcdGetComic() {
         when().get("http://xkcd.com/{comicId}/info.0.json", "386").
         then().
         statusCode(200).
