@@ -1,13 +1,14 @@
 package com.chappers00;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 
 public class TestAPIExamples {
 
-    @Test() public void
+    @Test
+    public void
     //Also see https://any-api.com/xkcd_com/xkcd_com/docs/_info_0_json/GET
     xkcdinfo0() {
         when().get("http://xkcd.com/info.0.json").
@@ -16,7 +17,7 @@ public class TestAPIExamples {
                 body("$", hasKey("title"));
     }
 
-    @Test() public void
+    @Test public void
     xkcdGetComic() {
         when().get("http://xkcd.com/{comicId}/info.0.json", "386").
         then().
@@ -32,13 +33,4 @@ public class TestAPIExamples {
             .assertThat()
             .body(matchesJsonSchemaInClasspath("schema.jsd"));
     }
-    @Test(expected = AssertionError.class)
-    public void testJsonSchemaFail() {
-            when()
-            .get("https://jsonplaceholder.typicode.com/comments?postId=1")
-            .then()
-            .assertThat()
-            .body(matchesJsonSchemaInClasspath("schemaFail.jsd"));
-    }
-    
 }
