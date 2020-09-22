@@ -25,8 +25,8 @@ idea {
 }
 
 dependencies {
-    compile 'org.slf4j:slf4j-api:1.7.28'
-    compile 'org.slf4j:slf4j-simple:1.7.28'
+    compile 'org.slf4j:slf4j-api:1.7.30'
+    compile 'org.slf4j:slf4j-simple:1.7.30'
     compile 'io.rest-assured:rest-assured:4.3.1'
     compile 'io.rest-assured:json-schema-validator:4.3.1'
     
