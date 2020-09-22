@@ -27,8 +27,8 @@ idea {
 dependencies {
     compile 'org.slf4j:slf4j-api:1.7.28'
     compile 'org.slf4j:slf4j-simple:1.7.28'
-    compile 'io.rest-assured:rest-assured:4.1.2'
-    compile 'io.rest-assured:json-schema-validator:4.1.2'
+    compile 'io.rest-assured:rest-assured:4.3.1'
+    compile 'io.rest-assured:json-schema-validator:4.3.1'
     
 
     // Declare the dependency for your favourite test framework you want to use in your tests.
